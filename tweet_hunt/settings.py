@@ -70,7 +70,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    os.environ['CLIENT_HOST'],
+    os.environ['CLIENT_HOST']
 ]
 
 ROOT_URLCONF = 'tweet_hunt.urls'
