@@ -1,0 +1,8 @@
+django
+djangorestframework
+django-cors-headers
+channels
+daphne
+graphene-django
+django-graphql-jwt
+psycopg2-binary

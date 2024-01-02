@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "tweet_hunt/asgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "tweet_hunt/asgi.py"
+      }
+    ]
+}
