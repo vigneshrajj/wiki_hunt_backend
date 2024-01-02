@@ -23,9 +23,6 @@ def handle_search(query, limit, offset):
 
 @api_view(['POST'])
 def search(request):
-    print('works till now')
-    print(type(request.body))
     body = json.loads(request.body.decode("utf-8"))
-    print(body)
-    # response = handle_search(body['query'], body['limit'], body['offset'])
-    return Response(body)
+    response = handle_search(body['query'], body['limit'], body['offset'])
+    return Response(response)
