@@ -6,3 +6,4 @@ daphne
 graphene-django
 django-graphql-jwt
 psycopg2-binary
+requests
