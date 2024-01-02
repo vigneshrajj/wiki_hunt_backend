@@ -2,6 +2,7 @@ from django.shortcuts import render
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 import requests
+from consumers import handle_search
 
 @api_view(['GET'])
 def search_article(request):
@@ -16,3 +17,8 @@ def search_article(request):
         return Response({ 'has_more': has_more, 'total_results': total_results, 'articles': articles })
     except requests.exceptions.RequestException as e:
         return e
+
+@api_view(['POST'])
+def search(request):
+    print(request.body)
+    return Response({ 'message': 'works' })
