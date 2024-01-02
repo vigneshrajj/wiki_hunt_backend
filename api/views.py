@@ -6,7 +6,7 @@ import json
 
 def handle_search(query, limit, offset):
     try:
-        url = f"https://www.mediawiki.org/w/api.php?action=query&format=json&prop=info&iwurl=1&continue=&generator=search&formatversion=2&inprop=url&gsrsearch={query}&gsrlimit={limit}&gsroffset={offset}&gsrinfo=totalhits%7Csuggestion%7Crewrittenquery&gsrprop=snippet"
+        url = f"https://en.wikipedia.org/w/api.php?action=query&format=json&prop=info&iwurl=1&continue=&generator=search&formatversion=2&inprop=url&gsrsearch={query}&gsrlimit={limit}&gsroffset={offset}&gsrinfo=totalhits%7Csuggestion%7Crewrittenquery&gsrprop=snippet"
         res = requests.get(url)
         data = res.json()
 
